@@ -55,11 +55,11 @@ plt.show()
 t1 = cv2.getTickCount()
 kx = np.array([[-1, 0, 1],
                [-2, 0, 2],
-               [-1, 0, 1]])
+               [-1, 0, 1]])/8
 
 ky = np.array([[-1, -2, -1],
                [ 0,  0,  0],
-               [ 1,  2,  1]])
+               [ 1,  2,  1]])/8
 
 Ix = cv2.filter2D(img, cv2.CV_64F, kx)
 Iy = cv2.filter2D(img, cv2.CV_64F, ky)
