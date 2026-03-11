@@ -1,0 +1,125 @@
+###### CONVOLUTION COMPARAISON METHODE DIRECT ET FILTER 2D###########
+Dimension de l'image : 240 lignes x 360 colonnes
+Méthode directe : 0.240222449 s
+Méthode filter2D : 0.008390649 s
+
+###### Gradiente ###########
+Dimension de l'image : 240 lignes x 360 colonnes
+Méthode filter2D Gradient Simple: 0.012102011 s
+Méthode filter2D Gradient Sobel: 0.140252402 s
+
+######### Harris ########################
+
+ALPHA 0.05
+
+Dimension de l'image : 320 lignes x 400 colonnes
+Type de l'image : float64
+Mon calcul des points de Harris : 0.049541882 s
+Nombre de cycles par pixel : 387.045953125 cpp
+Dimension de l'image : 320 lignes x 400 colonnes x 3 canaux
+Type de l'image : uint8
+
+ALPHA 0.1
+
+Dimension de l'image : 320 lignes x 400 colonnes
+Type de l'image : float64
+Mon calcul des points de Harris : 0.027167399 s
+Nombre de cycles par pixel : 212.2453046875 cpp
+Dimension de l'image : 320 lignes x 400 colonnes x 3 canaux
+Type de l'image : uint8
+
+
+################### DETECTEURS #################################
+
+ORB
+
+Dimension de l'image 1 : 418 lignes x 402 colonnes
+Type de l'image 1 : uint8
+Dimension de l'image 2 : 418 lignes x 402 colonnes
+Type de l'image 2 : uint8
+Détecteur : ORB
+Détection des points d'intérêt : 0.034389577 s
+
+KAZE
+
+Dimension de l'image 1 : 418 lignes x 402 colonnes
+Type de l'image 1 : uint8
+Dimension de l'image 2 : 418 lignes x 402 colonnes
+Type de l'image 2 : uint8
+Détecteur : KAZE
+Détection des points d'intérêt : 0.500668405 s
+
+######## DESCRIPETEURS ET APPARIEMMENT ###############
+
+ORB CROSS CHECK
+
+Dimension de l'image 1 : 418 lignes x 402 colonnes
+Type de l'image 1 : uint8
+Dimension de l'image 2 : 418 lignes x 402 colonnes
+Type de l'image 2 : uint8
+Détecteur : ORB
+Détection points et calcul descripteurs : 0.056468624 s
+Calcul de l'appariement : 0.025399488 s
+
+KAZE CROSS CHECK
+Dimension de l'image 1 : 418 lignes x 402 colonnes
+Type de l'image 1 : uint8
+Dimension de l'image 2 : 418 lignes x 402 colonnes
+Type de l'image 2 : uint8
+Détecteur : KAZE
+Détection points et calcul descripteurs : 0.707874497 s
+Calcul de l'appariement : 0.020667164 s
+
+ORB FLANN
+
+Dimension de l'image 1 : 418 lignes x 402 colonnes
+Type de l'image 1 : uint8
+Dimension de l'image 2 : 418 lignes x 402 colonnes
+Type de l'image 2 : uint8
+Détecteur : ORB
+Détection points et calcul descripteurs : 0.051420643 s
+Calcul de l'appariement : 0.008194178 s
+
+KAZE FLANN
+
+Dimension de l'image 1 : 418 lignes x 402 colonnes
+Type de l'image 1 : uint8
+Dimension de l'image 2 : 418 lignes x 402 colonnes
+Type de l'image 2 : uint8
+Détecteur : KAZE
+Détection points et calcul descripteurs : 0.812260903 s
+Calcul de l'appariement : 0.02754726 s
+
+ORB RATIO
+
+Dimension de l'image 1 : 418 lignes x 402 colonnes
+Type de l'image 1 : uint8
+Dimension de l'image 2 : 418 lignes x 402 colonnes
+Type de l'image 2 : uint8
+Détecteur : ORB
+Détection points et calcul descripteurs : 0.030804074 s
+Calcul de l'appariement : 0.005444066 s
+
+KAZE RATIO
+
+Dimension de l'image 1 : 418 lignes x 402 colonnes
+Type de l'image 1 : uint8
+Dimension de l'image 2 : 418 lignes x 402 colonnes
+Type de l'image 2 : uint8
+Détecteur : KAZE
+Détection points et calcul descripteurs : 0.644816456 s
+Calcul de l'appariement : 0.00278823 s
+
+
+######## TRANSFORM ROTATE ##############
+
+Détection points et calcul descripteurs : 0.024112485 s
+ORB: Erreur moyenne = 5.61339702901463 px
+ORB: % de matches < 3 px = 94.56521739130434 %
+###################################################
+
+Détection points et calcul descripteurs : 0.448728365 s
+KAZE: Erreur moyenne = 3.1669171727692187 px
+KAZE: % de matches < 3 px = 94.64285714285714 %
+
+
